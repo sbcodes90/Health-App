@@ -1,14 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Welcome } from './components/Welcome';
+import { FoodCategoriesList } from './components/FoodCategoriesList';
 
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Welcome />
+      
+    },
+    {
+      path: "/options",
+      element: <FoodCategoriesList />,
+     
+    }
+
+    
+  ],
+)
 function App() {
-  return (
-   <>
-   <Welcome />
-   </>
-  );
+  
+  return <RouterProvider router={router} />;
+
 }
 
 export default App;
