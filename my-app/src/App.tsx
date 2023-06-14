@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Welcome } from './components/Welcome';
-import { FoodCategoriesList } from './components/FoodCategoriesList';
+import { FoodCategoriesList, foodCategoryListLoader } from './components/FoodCategoriesList';
 
 const router = createBrowserRouter(
   [
@@ -12,6 +12,7 @@ const router = createBrowserRouter(
     {
       path: "/options",
       element: <FoodCategoriesList />,
+      loader: foodCategoryListLoader
      
     }
 
