@@ -7,8 +7,8 @@ function Nav() {
             <div className="container mx-auto px-6 py-3 ">
                 <div className="md:flex md:items-center md:justify-between">
                     <div className="flex justify-between items-center">
-                        <div className="text-xl font-semibold text-gray-700">
-                            <Link to={"/"}className="text-gray-800 text-xl font-bold hover:text-gray-700 md:text-2xl">foodie</Link>
+                        <div className="text-xl font-semibold text-black">
+                            <Link to={"/"}className="text-black text-xl font-bold hover:text-white md:text-2xl">foodie</Link>
                         </div>
 
                         <div className="flex md:hidden">
@@ -21,10 +21,10 @@ function Nav() {
                     </div>
 
                     <div className="hidden -mx-4 md:flex md:items-center">
-                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">Web developers</a>
-                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">Web Designers</a>
-                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">UI/UX Designers</a>
-                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">Contact</a>
+                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">Web developers</a>
+                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">Web Designers</a>
+                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">UI/UX Designers</a>
+                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">Contact</a>
                     </div>
                 </div>
             </div>
