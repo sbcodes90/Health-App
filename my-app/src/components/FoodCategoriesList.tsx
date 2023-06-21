@@ -2,11 +2,14 @@ import React from 'react'
 import { useLoaderData, LoaderFunction, Link } from "react-router-dom";
 import { getCategories } from '../services/Categories';
 import CategoryOption from './CategoryOption';
+import Nav from './Nav';
 
 export const FoodCategoriesList = () => {
     const data = useLoaderData() as Category[];
 
   return (
+    <>
+    <Nav />
     <div>FoodCategoriesList
     
     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 p-5 gap-6">
@@ -22,6 +25,7 @@ export const FoodCategoriesList = () => {
     </div>
 
 </div>
+</>
   )
 }
 
