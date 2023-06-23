@@ -42,7 +42,9 @@ export const Welcome = () => {
     <>
       <Nav />
       <Modal open={showModal} onClose={handleOnClose} />
-      <img src={logoBackground} alt="brand-logo" className="h-auto max-w-full" />
+
+      <img src={logoBackground} alt="brand-logo" className="h-auto w-full bg-cover" />
+
       <img src={friends} alt="pic-of-friends-eating" />
       <div className="w-full p-20 bg-black">
         <div className="flex justify-center pt-10 pb-20 text-4xl font-bold text-white">Let's Eat!</div>
