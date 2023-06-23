@@ -1,7 +1,6 @@
 import React from 'react'
 import { useLoaderData, LoaderFunction, Link } from "react-router-dom";
 import { getCategories } from '../services/Categories';
-import CategoryOption from './CategoryOption';
 import Nav from './Nav';
 
 export const FoodCategoriesList = () => {

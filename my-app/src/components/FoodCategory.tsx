@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, LoaderFunction } from 'react-router-dom'
 import axios from 'axios';
+import Nav from './Nav';
 
 function FoodCategory() {
     const { category } = useParams();
@@ -23,7 +24,7 @@ function FoodCategory() {
         const randomComments = Math.floor(Math.random() * 100);
 
         return (
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 justify-center pt-5">
                 <div className="flex space-x-1 items-center">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,30 +55,25 @@ function FoodCategory() {
 
     return (
         <>
-            FoodCategory {category}
-            {/*  {meals.map((meal) => (
-          <div key={meal.idMeal}>{meal.strMeal}<img src={meal.strMealThumb} alt=""/></div>
-          ))} */}
+            <Nav />
+            <div className="flex justify-center pb-5 pt-20 text-2xl font-bold bg-gray-100">{category}</div>
+            <div className=" bg-gray-100 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg: gap-6 p-20">
 
-         {/* <div className=" bg-gray-100 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-5"> */}
-         <div className=" bg-gray-100 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg: gap-6 p-20">
-
-            {meals.map((meal) => (
+                {meals.map((meal) => (
                     // <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 p-5 gap-6">
-                    <div key={meal.idMeal} className="max-w-xs container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-                        <div>
-                            <h1 className="text-1xl mt-2 ml-4 font-medium text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100">{meal.strMeal}</h1>
-                            {/* <p className="ml-4 mt-1 mb-2 text-gray-700 hover:underline cursor-pointer">#by Saca Tuerca</p> */}
-                        </div>
-                        <img className="w-full cursor-pointer" src={meal.strMealThumb} alt="" />
-                       
-                            {socialMediaSection()}
-                        </div>
-          
-               
-            ))
+                    <div key={meal.idMeal} className="max-w-xs container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl p-5 text-center">
+            
+                            <div className="text-1xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100 pb-5">{meal.strMeal}</div>
 
-            }
+                        <img className="w-full cursor-pointer" src={meal.strMealThumb} alt="" />
+
+                        {socialMediaSection()}
+                    </div>
+
+
+                ))
+
+                }
             </div>
         </>
     )
