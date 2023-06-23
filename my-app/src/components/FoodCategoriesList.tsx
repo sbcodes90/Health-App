@@ -10,12 +10,14 @@ export const FoodCategoriesList = () => {
   return (
     <>
       <Nav />
-      <div className='bg-black w-full h-auto p-20'>
-        <div className="p-20 bg-white h-auto pt-20 rounded">
-          <div className='text-orange-500 font-bold text-center pb-10 text-2xl'>Food Categories</div>
-          <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10 '>
+
+ 
+      <div className='w-full h-auto p-20 bg-gradient-to-b from-orange-200 to-orange-400'>
+      <div className='text-black font-bold text-center pb-10 text-2xl'>Food Categories</div>
+      
+          <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10'>
             {data.map((item) => (
-              <div key={item.idCategory} className="text-center p-10 border-4 rounded-xl border-black">
+              <div key={item.idCategory} className="text-center p-10 rounded-xl bg-gray-50 bg-opacity-50 border-slate-100 border-4 transition ease-in-out delay-150 bg-white-100 hover:-translate-y-1 hover:scale-110 hover:bg-white-100 duration-300 ...">
                 <div><img src={item.strCategoryThumb} alt="cateogry-image" /></div>
                 <br></br>
                 <div className="font-bold">{item.strCategory}</div>
@@ -23,7 +25,7 @@ export const FoodCategoriesList = () => {
             ))}
           </div>
         </div>
-      </div>
+      
 
       {/* <div className="flex justify-center p-20 text-orange-500 font-bold text-3xl bg-black">
         Food Categories List
