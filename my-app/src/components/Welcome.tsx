@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logoBackground from "../images/logo1.png";
 import { Link, LoaderFunction, useLoaderData } from "react-router-dom";
 import { getRandomMeal } from "../services/Categories";
-import friends from '../images/friends.jpg'
+import food from '../images/food.jpg'
 import Nav from "./Nav";
 export const Modal = ({ open, onClose }: { open: boolean, onClose: () => void }) => {
 
@@ -43,12 +43,12 @@ export const Welcome = () => {
       <Nav />
       <Modal open={showModal} onClose={handleOnClose} />
       <img src={logoBackground} alt="brand-logo" className="h-auto max-w-full" />
-      <img src={friends} alt="pic-of-friends-eating" />
+      <img src={food} alt="picture-of-food" className="h-[60vh] w-full object-cover"/>
       <div className="w-full p-20 bg-black">
         <div className="flex justify-center pt-10 pb-20 text-4xl font-bold text-white">Let's Eat!</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pb-20">
-          <div className="flex justify-center text-sm border-4 border-orange-500 rounded-3xl p-6 text-white font-bold" onClick={() => setShowModal(true)}>Surprise Me</div>
-          <div className="flex justify-center text-sm border-4 border-orange-500 rounded-3xl p-6 text-white font-bold"><Link to={'/options'}>View Categories</Link></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pb-20 m-20">
+          <div className="flex justify-center text-sm bg-orange-500 rounded-3xl p-6 text-black text-xl font-bold" onClick={() => setShowModal(true)}>Surprise Me!</div>
+          <div className="flex justify-center text-sm bg-orange-500 rounded-3xl p-6 text-black text-xl font-bold"><Link to={'/options'}>View Categories</Link></div>
         </div>
       </div>
 
