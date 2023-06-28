@@ -14,7 +14,7 @@ Goals:
 6) Add selected meals you want to eventually try to you personal database
 7) Utilize a restuarant API that will show restuarants catered to your food of choice in your specified city
 8) Save restaurants you want to try and leave reviews
-
+9) Pagination for food category results!!!!
 Tech Stack :
 ReactJS: *TODO*Change this to a react remix app to support backend features
 *TODO*Integrate with React NAtive
