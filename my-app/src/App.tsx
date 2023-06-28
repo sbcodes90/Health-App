@@ -3,6 +3,7 @@ import { Welcome, randomMealGenerator } from './components/Welcome';
 import { FoodCategoriesList, foodCategoryListLoader } from './components/FoodCategoriesList';
 import FoodCategory from './components/FoodCategory';
 import { HomePageLayout } from './components/HomePageLayout';
+import { FoodItem } from './components/FoodItem';
 
 /* const router = createBrowserRouter(
   [
@@ -38,7 +39,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="options" element={<FoodCategoriesList />} loader={foodCategoryListLoader} />
       <Route path="options/:category" element={<FoodCategory />} loader={foodCategoryListLoader} />
-     
+      <Route path="options/:category/:name" element={<FoodItem />} />
     </>
 
   )

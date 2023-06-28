@@ -46,7 +46,7 @@ export const Welcome = () => {
     <>
       <Modal open={showModal} onClose={handleOnClose} />
       <img src={logoBackground} alt="brand-logo" className="h-auto max-w-full" />
-      <img src={food} alt="picture-of-food" className="h-[60vh] w-full object-cover"/>
+      <img src={food} alt="food" className="h-[60vh] w-full object-cover"/>
       <div className="w-full p-20 bg-black">
         <div className="flex justify-center pt-10 lg:pb-20 text-4xl font-bold text-white">Let's Eat!</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pb-20 m-20">

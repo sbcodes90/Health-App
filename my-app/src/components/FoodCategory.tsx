@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { useParams, LoaderFunction } from "react-router-dom";
+import { useParams, LoaderFunction, Link } from "react-router-dom";
 import axios from "axios";
 import Nav from "./Nav";
 import { SocialMediaSection } from "./SocialMediaSection";
 
 function FoodCategory() {
   const { category } = useParams();
-  console.log(category)
   const [meals, setMeals] = useState<Meals[]>([]);
-  const getCategory = async () => {
-    const response = await axios.get(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
-    );
-    setMeals(response.data.meals);
-    return response.data.meals;
-  };
+
 
   useEffect(() => {
+
+    const getCategory = async () => {
+      const response = await axios.get(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+      );
+      setMeals(response.data.meals);
+      return response.data.meals;
+    };
+
     getCategory();
 
-    return () => {};
-  }, []);
+
+  }, [category]);
 
   return (
     <>
@@ -34,17 +36,20 @@ function FoodCategory() {
             key={meal.idMeal}
             className="max-w-xs container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl p-5 text-center"
           >
-            <div className="text-1xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100 pb-5">
-              {meal.strMeal}
-            </div>
+            <Link to={`${meal.strMeal}`}>
+              <div className="text-1xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100 pb-5">
+                {meal.strMeal}
+              </div>
 
-            <img
-              className="w-full cursor-pointer"
-              src={meal.strMealThumb}
-              alt="meal-category"
-            />
+              <img
+                className="w-full cursor-pointer"
+                src={meal.strMealThumb}
+                alt="meal-category"
+              />
+            </Link>
             <SocialMediaSection />
           </div>
+
         ))}
       </div>
     </>

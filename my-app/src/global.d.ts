@@ -11,11 +11,13 @@ interface Category {
     strArea: string;
     strMealThumb: string;
     strMeal: string;
+    
   
   }
 
   interface Meals {
     idMeal: string;
     strMeal: string;
-    strMealThumb: string
+    strMealThumb: string;
+    strYoutube: string;
   }
