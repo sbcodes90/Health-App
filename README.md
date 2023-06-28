@@ -12,12 +12,11 @@ Goals:
 4) Upload your own videos of meals you've made to your profile
 5) search for random meals for inspiration
 6) Add selected meals you want to eventually try to you personal database
-7) Utiliz a restuarant API that will show restuarants catered to your food of choice in your specified city
+7) Utilize a restuarant API that will show restuarants catered to your food of choice in your specified city
 8) Save restaurants you want to try and leave reviews
 
 Tech Stack :
-ReactJS
-Change this to a react remix app to support backend features
+ReactJS: *TODO*Change this to a react remix app to support backend features*Integrate with React NAtive
 Database: TBD
 Api: MealDB https://www.themealdb.com/api.php
 
