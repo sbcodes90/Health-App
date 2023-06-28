@@ -6,6 +6,7 @@ import { SocialMediaSection } from "./SocialMediaSection";
 
 function FoodCategory() {
   const { category } = useParams();
+  console.log(category)
   const [meals, setMeals] = useState<Meals[]>([]);
   const getCategory = async () => {
     const response = await axios.get(

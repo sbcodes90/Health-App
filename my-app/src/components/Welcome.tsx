@@ -3,7 +3,7 @@ import logoBackground from "../images/logo1.png";
 import { Link, LoaderFunction, useLoaderData } from "react-router-dom";
 import { getRandomMeal } from "../services/Categories";
 import food from '../images/food.jpg'
-import Nav from "./Nav";
+
 export const Modal = ({ open, onClose }: { open: boolean, onClose: () => void }) => {
 
   const data = useLoaderData() as RandomMealType[];
@@ -44,7 +44,6 @@ export const Welcome = () => {
   }
   return (
     <>
-      <Nav />
       <Modal open={showModal} onClose={handleOnClose} />
       <img src={logoBackground} alt="brand-logo" className="h-auto max-w-full" />
       <img src={food} alt="picture-of-food" className="h-[60vh] w-full object-cover"/>
