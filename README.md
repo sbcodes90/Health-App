@@ -16,7 +16,9 @@ Goals:
 8) Save restaurants you want to try and leave reviews
 
 Tech Stack :
-ReactJS: *TODO*Change this to a react remix app to support backend features*Integrate with React NAtive
+ReactJS: *TODO*Change this to a react remix app to support backend features
+*TODO*Integrate with React NAtive
+
 Database: TBD
 Api: MealDB https://www.themealdb.com/api.php
 
