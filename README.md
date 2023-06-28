@@ -17,8 +17,8 @@ Goals:
 
 Tech Stack :
 ReactJS
-May change this al arond to a react remix app to support backend features
-Databse: TBD
+Change this to a react remix app to support backend features
+Database: TBD
 Api: MealDB https://www.themealdb.com/api.php
 
 Check Back frequently for updates plan is to have this up and running ASAP!
