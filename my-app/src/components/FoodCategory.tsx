@@ -7,7 +7,7 @@ import { SocialMediaSection } from "./SocialMediaSection";
 function FoodCategory() {
   const { category } = useParams();
   const [meals, setMeals] = useState<Meals[]>([]);
-
+  const [checked, setChecked] = useState([]);
 
   useEffect(() => {
 
@@ -47,6 +47,7 @@ function FoodCategory() {
                 alt="meal-category"
               />
             </Link>
+            <input value={meal.strMeal} type="checkbox" />
             <SocialMediaSection />
           </div>
 
