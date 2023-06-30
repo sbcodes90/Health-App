@@ -3,6 +3,7 @@ import { useParams, LoaderFunction, Link } from "react-router-dom";
 import axios from "axios";
 import Nav from "./Nav";
 import { SocialMediaSection } from "./SocialMediaSection";
+import AddToFavesCheckBox from "./AddToFavesCheckBox";
 
 function FoodCategory() {
   const { category } = useParams();
@@ -47,7 +48,7 @@ function FoodCategory() {
                 alt="meal-category"
               />
             </Link>
-            <input value={meal.strMeal} type="checkbox" />
+            <AddToFavesCheckBox meal={meal.strMeal} />
             <SocialMediaSection />
           </div>
 
