@@ -24,5 +24,5 @@ Api: MealDB https://www.themealdb.com/api.php
 
 Check Back frequently for updates plan is to have this up and running ASAP!
 
-Technologies Used: Headless UI for premade UI components, TailwindCSS, TypeScript, React
+Technologies Used: Headless UI for premade UI components, TailwindCSS, TypeScript, React Router V6 to load data
 
