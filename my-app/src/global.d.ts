@@ -6,13 +6,10 @@ interface Category {
   }
 
   interface RandomMealType {
-
     idMeal: string;
     strArea: string;
     strMealThumb: string;
     strMeal: string;
-    
-  
   }
 
   interface Meals {
@@ -20,4 +17,5 @@ interface Category {
     strMeal: string;
     strMealThumb: string;
     strYoutube: string;
+    strInstructions: string;
   }
