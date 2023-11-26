@@ -8,14 +8,23 @@ export const Modal = ({ open, onClose }: { open: boolean, onClose: () => void })
 
   const data = useLoaderData() as RandomMealType[];
 
+  const showMealDetails = () => {
+    console.log('data', data)
+    //take us to that meals page where details will be listed 
+    //share id
+    //link to or navigate to that page using meal id
+  }
+
   if (!open) {
 
     return null
 
   }
 
+
+
   return (
-    <div onClick={onClose} className="fixed inset-0 bg-gray opacity-98 backdrop-blur-xl flex justify-center items-center p-20">
+    <div className="fixed inset-0 bg-gray opacity-98 backdrop-blur-xl flex justify-center items-center p-20">
       <div className="bg-white rounded p-20">
 
            <div className="text-center pb-10 font-bold text-xl">{data && data[0]?.strMeal}</div>
@@ -25,7 +34,7 @@ export const Modal = ({ open, onClose }: { open: boolean, onClose: () => void })
           <p>{data[0].strMeal}</p>
           <img src={data[0]?.strMealThumb} alt=""  className="w-['10vh']"/> */}
         <div className="flex justify-center gap-10 pt-10">
-        <button>Details</button>
+        <button onClick={() => showMealDetails()}>Details</button>
         <button
           onClick={onClose}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded r">
