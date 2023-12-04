@@ -48,8 +48,8 @@ getParams();
                         <div>
                          {VideoEmbedder(getParams())}
                         </div>
-                        <div className='font-black py-[10px]'>Directions</div>
-                    <div className='text-left text-black bg-white rounded-2xl px-[50px] py-[25px]  border-solid border-4 border-white'>{fact.strInstructions}</div>
+                        <div className='font-bold py-[10px] pt-[100px]'>Directions</div>
+                    <div className=' text-xs text-left text-black bg-white rounded-2xl px-[50px] py-[25px]  border-solid border-4 border-white'>{fact.strInstructions}</div>
                     </div>
 {/* <iframe className='video'
         title='Youtube player'
