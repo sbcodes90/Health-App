@@ -60,7 +60,7 @@ export const Welcome = () => {
         <div className="flex justify-center pt-10 lg:pb-20 text-4xl font-bold text-white">Let's Eat!</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pb-20 m-20">
           <div className="flex justify-center text-sm bg-orange-500 rounded-3xl p-6 text-black text-xl font-bold" onClick={() => setShowModal(true)}>Surprise Me!</div>
-          <div className="flex justify-center text-sm bg-orange-500 rounded-3xl p-6 text-black text-xl font-bold"><Link to={'/options'}>View Categories</Link></div>
+          <div className="flex justify-center text-sm bg-orange-500 rounded-3xl p-6 text-black text-xl font-bold"><Link to={'/categories'}>View Categories</Link></div>
         </div>
       </div>
 

@@ -38,9 +38,9 @@ const router = createBrowserRouter(
         <Route index element={<Welcome />} loader={randomMealGenerator} />
   </Route>
   <Route>
-      <Route path="options" element={<FoodCategoriesList />} loader={foodCategoryListLoader} />
-      <Route path="options/:category" element={<FoodCategory />} loader={foodCategoryListLoader} />
-      <Route path="options/:category/:name" element={<FoodItem />} />
+      <Route path="categories" element={<FoodCategoriesList />} loader={foodCategoryListLoader} />
+      <Route path="categories/:category" element={<FoodCategory />} loader={foodCategoryListLoader} />
+      <Route path="categories/:category/:name" element={<FoodItem />} />
       </Route>
     </>
 
