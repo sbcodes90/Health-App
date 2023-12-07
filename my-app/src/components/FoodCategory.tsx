@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, LoaderFunction, Link } from "react-router-dom";
 import axios from "axios";
-import Nav from "./Nav";
 import { SocialMediaSection } from "./SocialMediaSection";
 import AddToFavesCheckBox from "./AddToFavesCheckBox";
 
@@ -27,7 +26,6 @@ function FoodCategory() {
 
   return (
     <>
-      <Nav />
       <div className="flex justify-center pb-5 pt-20 text-2xl font-bold bg-gray-100">
         {category}
       </div>

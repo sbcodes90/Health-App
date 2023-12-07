@@ -36,11 +36,12 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<HomePageLayout />}>
         <Route index element={<Welcome />} loader={randomMealGenerator} />
-  </Route>
-  <Route>
-      <Route path="categories" element={<FoodCategoriesList />} loader={foodCategoryListLoader} />
+        <Route path="categories" element={<FoodCategoriesList />} loader={foodCategoryListLoader} />
       <Route path="categories/:category" element={<FoodCategory />} loader={foodCategoryListLoader} />
       <Route path="categories/:category/:name" element={<FoodItem />} />
+  
+  
+      
       </Route>
     </>
 
