@@ -9,8 +9,6 @@ export const FoodItem = () => {
 
     const [item, setItem] = useState<Meals[]>([]);
 
-    //console.log('youtube link', item[0].strYoutube)
-
     useEffect(() => {
         const getFoodItem = async () => {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
@@ -22,10 +20,6 @@ export const FoodItem = () => {
         getFoodItem()
 
     }, [name])
-
-    const youtubeID: string = `xvPR2Tfw5k0`
-   // "https://www.youtube.com/watch?v=SC17Mc70Db0"
-
 
    const getParams = () => {
         const itemUrl = item[0]?.strYoutube;
@@ -51,12 +45,6 @@ getParams();
                         <div className='font-bold py-[10px] pt-[100px]'>Directions</div>
                     <div className=' text-xs text-left text-black bg-white rounded-2xl px-[50px] py-[25px]  border-solid border-4 border-white'>{fact.strInstructions}</div>
                     </div>
-{/* <iframe className='video'
-        title='Youtube player'
-        
-        sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
-        src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}>
-</iframe> */}
                 </div>
             })}
             </div>
