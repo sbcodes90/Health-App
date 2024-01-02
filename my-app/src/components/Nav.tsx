@@ -23,8 +23,6 @@ function Nav() {
                     <div className="hidden -mx-4 md:flex md:items-center">
                         <Link to="/categories" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">Food Categories</Link>
                         <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">My Faves</a>
-                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">Community</a>
-                        <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-black capitalize hover:text-white font-bold">SomeLink</a>
                     </div>
                 </div>
             </div>
