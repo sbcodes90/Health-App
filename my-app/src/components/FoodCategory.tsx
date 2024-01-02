@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams, LoaderFunction, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { SocialMediaSection } from "./SocialMediaSection";
-import AddToFavesCheckBox from "./AddToFavesCheckBox";
 
 function FoodCategory() {
   const { category } = useParams();
   const [meals, setMeals] = useState<Meals[]>([]);
-  const [checked, setChecked] = useState([]);
 
   useEffect(() => {
 
@@ -35,7 +33,7 @@ function FoodCategory() {
             key={meal.idMeal}
             className="max-w-xs container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl p-5 text-center"
           >
-            <Link to={`${meal.strMeal}`}>
+            <Link to={`${meal.idMeal}`}>
               <div className="text-1xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100 pb-5">
                 {meal.strMeal}
               </div>
@@ -46,7 +44,6 @@ function FoodCategory() {
                 alt="meal-category"
               />
             </Link>
-            <AddToFavesCheckBox meal={meal.strMeal} />
             <SocialMediaSection />
           </div>
 

@@ -10,7 +10,6 @@ const handleChange = (e) => {
     );
   }; */
 function AddToFavesCheckBox({meal}: {meal: string}) {
-    //console.log('meals', meal)
 
     const [faves, setFaves] = useState <Array<string>>([]);
 
@@ -21,7 +20,6 @@ function AddToFavesCheckBox({meal}: {meal: string}) {
         )
        
     }
-console.log('faves', faves)
     return (
         <div> 
             <div className="flex items-center">
