@@ -7,6 +7,7 @@ import food from '../images/food.jpg'
 export const Modal = ({ open, onClose }: { open: boolean, onClose: () => void }) => {
 
   const data = useLoaderData() as RandomMealType[];
+  console.log('data', data)
 
   if (!open) {
 
@@ -21,7 +22,7 @@ export const Modal = ({ open, onClose }: { open: boolean, onClose: () => void })
            <div className="text-center pb-10 font-bold text-xl">{data && data[0]?.strMeal}</div>
           <img src={data[0]?.strMealThumb} alt=""  className="lg:h-[40vh]" /> 
         <div className="flex justify-center gap-10 pt-10">
-        <Link to={`categories/${data[0]?.strCategory}/${data[0]?.strMeal}`}>Details</Link>        <button
+        <Link to={`categories/${data[0]?.strCategory}/${data[0]?.idMeal}`}>Details</Link>        <button
           onClick={onClose}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded r">
           Close
