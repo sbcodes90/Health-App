@@ -40,7 +40,7 @@ getParams();
             <img className="w-[100%] rounded-2xl"src={item[0]?.strMealThumb}  alt={item[0]?.strMeal} />
             {VideoEmbedder(getParams())}
         </div>
-        <div className="text-2xl font-bold flex justify-center mt-20 text-white mb-10">Directions</div>
+        <div className="text-2xl font-bold flex justify-center mt-20 text-white mb-10">The Recipe</div>
         <div className="p-10 text-white font-semibold rounded-xl bg-gray-800 opacity-100">{item[0]?.strInstructions}</div>
         </div>
         </> 
