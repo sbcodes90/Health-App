@@ -34,14 +34,14 @@ getParams();
 
     return (
          <>
-        <div className="p-10">
-        <header className="flex flex-row justify-center text-2xl font-bold mt-[100px] mb-[100px]">{item[0]?.strMeal}</header>
+        <div className="p-10 bg-black">
+        <header className="flex flex-row justify-center text-2xl font-bold mt-[75px] mb-[100px] text-white">{item[0]?.strMeal}</header>
         <div className="flex flex-col lg:flex-row lg:justify-around gap-5">
-            <img className="w-[100%]"src={item[0]?.strMealThumb}  alt={item[0]?.strMeal} />
+            <img className="w-[100%] rounded-2xl"src={item[0]?.strMealThumb}  alt={item[0]?.strMeal} />
             {VideoEmbedder(getParams())}
         </div>
-        <div className="text-2xl font-bold flex justify-center mt-20">Directions</div>
-        <div className="p-10">{item[0]?.strInstructions}</div>
+        <div className="text-2xl font-bold flex justify-center mt-20 text-white mb-10">Directions</div>
+        <div className="p-10 text-white font-semibold rounded-xl bg-gray-800 opacity-100">{item[0]?.strInstructions}</div>
         </div>
         </> 
      

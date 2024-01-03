@@ -3,7 +3,7 @@ import React from 'react'
 function VideoEmbedder( id: string) {
   return (
     <iframe
-  className="w-[100%]"
+  className="w-[100%] rounded-2xl"
       src={`https://www.youtube.com/embed/${id}?autoplay=0`}
       //frameBorder="0"
       //allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
