@@ -32,25 +32,19 @@ useEffect(() => {
 
 getParams();
 
-    return (     
-         <div className="bg-orange-300 text-black px-[50px] py-[50px]">
-            <div className="bg-orange-400 rounded-xl text-center px-[25px] py-[25px]"> 
-         <h1 className="text-xl font-bold pb-[20px]">{item[0]?.strMeal?.toLowerCase().replace(/\b\w/g, s => s.toUpperCase())}</h1>
-           {item?.map((fact)=> {
-                return <div key={fact.idMeal} className='lg:grid grid-cols-2 gap-[25px]'>
-                    <img src={fact.strMealThumb}  alt={fact.strMeal} />
-                    <div className="">
-                        <div>
-                         {VideoEmbedder(getParams())}
-                        </div>
-                        <div className='font-bold py-[10px] pt-[100px]'>Directions</div>
-                    <div className=' text-xs text-left text-black bg-white rounded-2xl px-[50px] py-[25px]  border-solid border-4 border-white'>{fact.strInstructions}</div>
-                    </div>
-                </div>
-            })} 
-            </div>
+    return (
+         <>
+        <div className="p-10">
+        <header className="flex flex-row justify-center text-2xl font-bold mt-[100px] mb-[100px]">{item[0]?.strMeal}</header>
+        <div className="flex flex-col lg:flex-row lg:justify-around gap-5">
+            <img className="w-[100%]"src={item[0]?.strMealThumb}  alt={item[0]?.strMeal} />
+            {VideoEmbedder(getParams())}
         </div>
-      
+        <div className="text-2xl font-bold flex justify-center mt-20">Directions</div>
+        <div className="p-10">{item[0]?.strInstructions}</div>
+        </div>
+        </> 
+     
     )
 }
 
