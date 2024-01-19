@@ -40,15 +40,18 @@ export const Welcome = () => {
   }
   return (
     <>
+    
       <Modal open={showModal} onClose={handleOnClose} />
+      <div className="bg-black w-full h-screen">
       <img src={logoBackground} alt="brand-logo" className="h-auto max-w-full" />
-      <img src={food} alt="food" className="h-[60vh] w-full object-cover"/>
-      <div className="w-full p-20 bg-black">
-        <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-2 gap-10 pb-20 m-20">
-          <div className=" w-[300px] flex justify-center text-lg bg-orange-500 rounded-3xl px-[10px] py-5 text-black font-bold  border-orange-300 border-8" onClick={() => setShowModal(true)}>Surprise Me!</div>
-          <div className=" w-[300px] flex justify-center text-lg bg-orange-500 rounded-3xl p-5 text-black font-bold border-orange-300 border-8"><Link to={'/categories'}>View Categories</Link></div>
+      <img src={food} alt="food" className="h-[25vh] lg:h-[50vh] w-full object-cover"/>
+
+        <div className="bg-black grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-2 gap-10 pb-20 pt-20">
+          <div className=" w-[200px] flex justify-center text-sm lg:text-md bg-orange-500 rounded-2xl px-[10px] py-5 text-black font-bold" onClick={() => setShowModal(true)}>Surprise Me!</div>
+          <div className=" w-[200px] flex justify-center text-sm lg:text-md rounded-2xl p-5 text-orange-300 font-bold border-orange-300 border-4"><Link to={'/categories'}>View Categories</Link></div>
         </div>
       </div>
+      
 
 
     </>
