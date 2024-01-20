@@ -1,4 +1,4 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider , Routes} from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom';
 import { Welcome, randomMealGenerator } from './components/Welcome';
 import { FoodCategoriesList, foodCategoryListLoader } from './components/FoodCategoriesList';
 import FoodCategory from './components/FoodCategory';
