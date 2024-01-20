@@ -34,14 +34,14 @@ getParams();
 
     return (
          <>
-        <div className="p-10 bg-black">
-        <header className="flex flex-row justify-center text-2xl font-bold mt-[75px] mb-[100px] text-white">{item[0]?.strMeal}</header>
-        <div className="flex flex-col lg:flex-row lg:justify-around gap-5">
-            <img className="w-[100%] rounded-2xl"src={item[0]?.strMealThumb}  alt={item[0]?.strMeal} />
-            {VideoEmbedder(getParams())}
+        <div className="p-10 bg-black h-full">
+        <header className="text-center text-2xl font-bold mt-[75px] mb-[100px] text-white">{item[0]?.strMeal}</header>
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
+            <img className="w-full h-full rounded-2xl"src={item[0]?.strMealThumb}  alt={item[0]?.strMeal} />
+             {VideoEmbedder(getParams())}
         </div>
-        <div className="text-2xl font-bold flex justify-center mt-20 text-white mb-10">The Recipe</div>
-        <div className="p-10 text-white font-semibold rounded-xl bg-gray-800 opacity-100">{item[0]?.strInstructions}</div>
+        <div className="text-2xl font-bold flex justify-center text-white mb-10 pt-20">The Recipe</div>
+        <div className="h-[25vh] px-[50px] py-[50px] lg:mx-[100px] overflow-scroll text-white font-semibold rounded-xl bg-gray-800 opacity-100">{item[0]?.strInstructions}</div> 
         </div>
         </> 
      
