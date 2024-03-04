@@ -7,7 +7,9 @@ A web application and mobile app dedicated to Foodies around the world! Foodies 
 Goals:
 
 ✅ Get random meal suggestions with complete ingredients and youtube video for instructions
+
 2) Create a profile to store saved meals you want to try, restuarants you want to try, and more
+
 3) Share meal suggestions and videos of meals you've made with friends 
 4) Upload your own videos of meals you've made to your profile
 5) Add selected meals you want to eventually try to you personal database
